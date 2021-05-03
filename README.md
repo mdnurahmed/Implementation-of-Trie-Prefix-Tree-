@@ -35,8 +35,9 @@ wordDictionary.search("b.."); // return True
 - At most 50000 calls will be made to addWord and search.
 
 
-## Solution 1 : backtrack + hashtable 
+## Solution 1 : Backtrack + Hashtable 
 -------------------------------------
+
 We could generate all possible combination of a word using backtrack/recursion and then store them in a hastable . 
 For example for 'at' all possible combination would be 
 - at
@@ -44,14 +45,15 @@ For example for 'at' all possible combination would be
 - a.
 - ..
 
-when searching , we would simply look up in the hashtable 
+when searching , we would simply look up in the hashtable .
 
 complexity : O(2^n) for insert operation where n is the lenght of the word and o(1) search operation. 
-This might be a feasible solution if there are a lot of search operation comparing to the insert operation .
+This might be a feasible solution if there are a lot of search operations comparing to the insert operations .
 
 
-## Solution 2 : trie + dfs 
+## Solution 2 : Trie + DFS 
 ------------------------------
+
 we simply add a word in trie . when searching if we are at at node X and if we find '.' we can go to any neighbour node of X .
 
 complexity : O(n) for insert operation and o(t*n) for search operation where t is the number of word and n is length of a word. The searching is exhaustive and exponential but optimized because there are pruning here. For example, if we find no satisfying next node we dont search any deeper .
