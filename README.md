@@ -58,4 +58,4 @@ we simply add a word in trie . when searching if we are at at node X and if we f
 
 complexity : O(n) for insert operation and o(t*n) for search operation where t is the number of word and n is length of a word. The searching is exhaustive and exponential but optimized because there are pruning here. For example, if we find no satisfying next node we dont search any deeper .
 
-Another way to say the complexity of search is P^C where P is number of '.' (p<=n) and C is total possible unqiue charecter in trie . Here C = 26 .  
+Another way to say the complexity of search is P^C where P is number of '.' ( P <= n) and C is total possible unqiue charecter in trie and n is length of a word. Here C = 26.  
