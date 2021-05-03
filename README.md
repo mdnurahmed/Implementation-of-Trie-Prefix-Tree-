@@ -54,7 +54,7 @@ This might be a feasible solution if there are a lot of search operations compar
 ## Solution 2 : Trie + DFS 
 ------------------------------
 
-we simply add a word in trie . when searching if we are at at node X and if we find '.' we can go to any neighbour node of X .
+we simply add a word in trie . when searching if we are at at node X and if we have a '.' in the pattern that we are searching, we can go to any neighbour node of X since we can assume any charecter in the place of '.' .
 
 complexity : O(n) for insert operation and o(t*n) for search operation where t is the number of word and n is length of a word. The searching is exhaustive and exponential but optimized because there are pruning here. For example, if we find no satisfying next node we dont search any deeper .
 
